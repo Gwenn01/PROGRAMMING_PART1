@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+class Users{
+    public: 
+    int User;
+    int Password;
+    int Balance;
+    
+   Users(int aUser, int  aPassword, int aBalance){
+       User = aUser;
+       Password = aPassword;
+       Balance = aBalance;
+       }
+};
+void System(){
+    cout <<"==========MENU==========" << endl;
+    cout << "===1. Check Balance===" << endl;
+    cout << "===2. Deposit===" << endl;
+    cout << "===3. Withdraw===" << endl;
+    
+}
+int main()
+{
+ 	Users user1(1, 123, 500);
+ 	Users user2(2, 132, 1000);
+ 	
+ 	int user;
+ 	int password;
+ 	int deposit;
+ 	int withdraw;
+ 	int option;
+ 	
+ 	cout << "  Enter User ";
+ 	cin >> user;
+ 	
+ if  (user == 1 || user == 2){ 	
+ 
+     cout << "  Enter Password ";
+ 	cin >> password;
+ 	
+ 	// user 1
+ 	if (password == user1.Password){
+ 	   System();
+ 	   cout << "   OPTION   ";
+ 	   cin >> option;
+ 	   
+ 	   switch (option)
+   {
+ 	    case 1: 
+ 	    cout << "   Your Balance Now is: " << user1.Balance;
+ 	    break;
+ 	    
+ 	    case 2:
+ 	    cout << "  Enter the Amount: ";
+ 	    cin >> deposit;
+ 	    cout << " You Balance now is " << deposit + user1.Balance;
+ 	    break;
+ 	    
+ 	    case 3: 
+ 	    cout << "  Enter the Amount: ";
+ 	    cin >> withdraw;
+ 	    if (user1.Balance >= withdraw){
+ 	    cout << "  Your Balamce now is " << withdraw - user1.Balance; 
+ 	    }else {
+ 	        cout << " You don't have enough Balance ";
+ 	        }
+  }
+ 	 // user 2  
+ 	 } else if (password == user2.Password){
+ 	   System();
+ 	    cout << "   OPTION   ";
+ 	    cin >> option;  
+ 	     switch (option)
+   {
+ 	    case 1: 
+ 	    cout << "   Your Balance Now is: " << user2.Balance;
+ 	    break;
+ 	    
+ 	    case 2:
+ 	    cout << "  Enter the Amount: ";
+ 	    cin >> deposit;
+ 	    cout << " You Balance now is " << deposit + user2.Balance;
+ 	    break;
+ 	    
+ 	    case 3: 
+ 	    cout << "  Enter the Amount: ";
+ 	    cin >> withdraw;
+ 	    if (user2.Balance >= withdraw){
+ 	    cout << "  Your Balamce now is " << withdraw - user2.Balance; 
+ 	    }else {
+ 	        cout << " You don't have enough Balance ";
+ 	        }
+  }       
+ 	            
+ 	   }else {
+ 	   cout << "  INVALID PASSWORD   ";
+ 	     }
+ 	     
+ } else {
+     cout << "  INVALID USER  ";
+     }
+}

@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <conio.h>
+#define p printf
+#define s scanf
+
+int main()
+{
+    float project, quizzes, majorexam, semestral_grade;
+    
+    p("Enter your Project: ");
+    s("%f", &project);
+    
+    p("Enter your Quizzes: ");
+    s("%f", &quizzes);
+    
+    p("Enter your Major Exam: ");
+    s("%f", &majorexam);
+    
+    semestral_grade = project * 0.2 + quizzes * 0.2 + majorexam * 0.4;
+    
+    p("Your Semester Grade is %.2f\n\n", semestral_grade);
+    
+    float convension = 54.35;
+    float dollar, pesos;
+    
+    if (semestral_grade >= 75){
+    p("PASSED\n");
+    p("Enter your dollar: ");
+    s("%f",  &dollar);
+    pesos = dollar * convension;
+    p("%.2f dollar is equivalent to pesos = %.2f", dollar, pesos);
+    }else
+    p("FAILED");
+    
+    return 0;
+}

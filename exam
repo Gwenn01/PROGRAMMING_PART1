@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float quiz, project, exam, semestral_grade;
+
+    printf("Enter quiz score (out of 100): ");
+    scanf("%f", &quiz);
+
+    printf("Enter project score (out of 100): ");
+    scanf("%f", &project);
+
+    printf("Enter exam score (out of 100): ");
+    scanf("%f", &exam);
+
+    // Calculate semestral grade using the given formula
+    semestral_grade = 0.2 * quiz + 0.2 * project + 0.4 * exam;
+
+    printf("Semestral grade: %.2f\n", semestral_grade);
+
+    if (semestral_grade >= 60) {
+        printf("Pass\n");
+    } else {
+        printf("Fail\n");
+    }
+
+    return 0;
+}

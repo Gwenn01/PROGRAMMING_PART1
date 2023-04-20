@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+
+#define p printf
+#define s scanf
+
+int main()
+{
+    float a, b, c, d, e;
+    float sum, different, product, quotient;
+    p("Value of a: ");
+    s("%f", &a);
+     p("Value of b: ");
+    s("%f", &b);
+    p("Value of c: ");
+    s("%f", &c);
+    p("Value of d: ");
+    s("%f", &d);
+    p("Value of e: ");
+    s("%f", &e);
+    sum = a + b + c + d + e;
+    p("The sum is %f \n", sum);
+    different = a - b - c - d - e;
+    p("The different is %f \n", different);
+    product = a * b * c * d * e;
+    p("The product is %f \n", product);
+    quotient = a / b / c / d / e;
+    p("The quotuent is %f \n", quotient);
+    return 0;
+}

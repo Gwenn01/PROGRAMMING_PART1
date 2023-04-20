@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class person{
+    public:
+    string name;
+    int age;
+    
+    person(string aname, int aage){
+        name = aname;
+        age = aage;
+        
+        }
+ };
+int main()
+{
+    string name;
+    int age;
+    
+    cout << "Enter Name: ";
+    cin >> name;
+    cout << "Enter Age: ";
+    cin >> age;
+    
+    person p1(name, age);
+    
+    cout << name + " Created" << endl;
+    
+    cout << age + " Created" << endl;
+    
+    // not input
+    
+    person p2("Gwen", 18);
+    
+    cout << p2.name << endl << p2.age;
+    
+}
